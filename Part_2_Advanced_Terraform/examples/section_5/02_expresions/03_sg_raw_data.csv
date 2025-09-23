@@ -1,0 +1,10 @@
+direction,protocol,port,cidr_blocks,description
+in,tcp,22,0.0.0.0/0,SSH access
+in,tcp,80,0.0.0.0/0,HTTP access
+in,tcp,85-90,0.0.0.0/0,Custom TCP range
+in,tcp,443,0.0.0.0/0,HTTPS access
+in,tcp,1024-65535,10.0.0.0/16,Ephemeral ports from VPC
+out,tcp,0-65535,0.0.0.0/0,All outbound TCP
+out,udp,53,0.0.0.0/0,DNS queries
+out,udp,1000-2000,192.168.0.0/24,Custom UDP range
+out,-1,0,0.0.0.0/0,All traffic (catch-all)

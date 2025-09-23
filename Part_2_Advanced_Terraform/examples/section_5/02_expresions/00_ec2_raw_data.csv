@@ -1,0 +1,11 @@
+name,ami,instance_type,availability_zone
+web-server-1,ami-0c02fb55956c7d316,t2.micro,us-east-1a
+web-server-2,ami-0c02fb55956c7d316,t2.micro,us-east-1b
+db-server-1,ami-04505e74c0741db8d,t3.medium,us-east-1a
+db-server-2,ami-04505e74c0741db8d,t3.medium,us-east-1b
+app-server-1,ami-08c40ec9ead489470,t3.large,us-east-1a
+app-server-2,ami-08c40ec9ead489470,t3.large,us-east-1b
+cache-server-1,ami-0c02fb55956c7d316,t2.small,us-east-1a
+cache-server-2,ami-0c02fb55956c7d316,t2.small,us-east-1b
+monitoring-1,ami-08c40ec9ead489470,t2.micro,us-east-1a
+bastion-1,ami-04505e74c0741db8d,t2.nano,us-east-1b
