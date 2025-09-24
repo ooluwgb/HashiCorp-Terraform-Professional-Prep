@@ -21,6 +21,7 @@ Modules can also use arguments like `count` and `for_each`.
 ```hcl
 module "vpc" {
   source = "git::https://example.com/vpc.git?ref=v1.2.0"
+  #source = "path_to_a_local_module_directory"             #This is also valid
 }
 ```
 
@@ -133,7 +134,8 @@ module "tunnel" {
   }
 }
 
-terraform {
+#This block goes in the child module
+terraform { 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
