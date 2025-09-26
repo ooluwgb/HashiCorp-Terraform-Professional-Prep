@@ -3,6 +3,7 @@
 ## Terraform Modules  
 ## Terraform Modules Variable  
 ## Terraform Modules Outputs  
+## Terraform Random Provider  
 ## Terraform Import (Modules)  
 ## Terraform Moved Block (Modules)  
 ## Terraform Provider (Modules)(Default Tags)  
@@ -44,6 +45,39 @@ This depends on the child module (the resource configuration).
 The outputs in the child module are used to expose values to the root module so that other root modules can reference them.  
 All outputs needed in the root module must also be configured in the child module.  
 The same syntax used for regular outputs is used for module outputs.  
+
+---
+
+## TERRAFORM RANDOM PROVIDER
+
+**TYPE:** REGISTRY  
+**DOCUMENTATION:** REGISTRY → BROWSE PROVIDERS → RANDOM → DOCUMENTATION  
+
+The `random` provider allows the use of randomness within Terraform configurations.  
+This is a logical provider, which means it works entirely within Terraform’s logic and doesn’t interact with external services.  
+
+```hcl
+# INSTALL THE PROVIDER
+terraform {
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = ">= 3.0.0"
+    }
+  }
+}
+
+# CREATE THE RANDOM PET ID
+resource "random_pet" "example" {
+  length    = 2
+  separator = "-"
+}
+
+# USE THE RANDOM PET ID
+variable "random_pet" {
+  default = random_pet.example.id
+}
+```
 
 ---
 
@@ -92,7 +126,7 @@ moved {
 
 ---
 
-## TERRAFORM BLOCK (MODULE REQUIRED PROVIDER WITH ALIAS)
+## TERRAFORM BLOCK (MODULE REQUIRED PROVIDER WITH ALIAS)(DEFAULT TAGS)
 
 **TYPE:** LANGUAGE  
 **DOCUMENTATION:** CONFIGURATION LANGUAGE → BUILD AND USE MODULES → DEVELOP MODULES → PROVIDER WITHIN MODULES  
@@ -142,6 +176,25 @@ terraform {
       version = ">= 2.7.0"
       configuration_aliases = [ aws.src, aws.dst ]
     }
+  }
+}
+```
+
+### With Expression and Default Tags  
+
+```hcl
+locals {
+  common_tags = {
+    Environment = "production"
+    Project     = "web-app"
+  }
+}
+
+provider "aws" {
+  region = var.aws_region
+
+  default_tags {
+    tags = local.common_tags
   }
 }
 ```

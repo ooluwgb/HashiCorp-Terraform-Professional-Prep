@@ -48,6 +48,13 @@ Before you begin, you will need to have the following installed and configured:
 
 This repository is organized into the following parts. Each part contains its own set of `examples` and `exercises`.
 
+### [Part 0: Introduction](./Part_0_Introduction)
+
+| Section                                                              | Topics Covered                                          |
+| :------------------------------------------------------------------- | :------------------------------------------------------ |
+| [**Section 0: AWS Resources**](./Part_0_Introduction/SECTION_0_Aws_Resources) | A brief introduction to the AWS resources used in this guide. |
+| **[Examples](./Part_0_Introduction/examples)** | Code examples for all concepts in Part 0. |
+
 ### [Part 1: Terraform Core Concepts](./Part_1_Terraform_Core_Concepts)
 
 | Section                                                                                    | Topics Covered                                                               |
