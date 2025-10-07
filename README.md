@@ -12,9 +12,11 @@ A comprehensive study guide with notes, code examples, and exercises for the Has
 
 - [About This Project](#-about-this-project)
 - [🚀 How to Use This Repository](#-how-to-use-this-repository)
+- [🗓️ Suggested Study Plan](#️-suggested-study-plan)
 - [📋 Prerequisites](#-prerequisites)
 - [🏗️ Structure](#️-structure)
 - [🤝 Contributing](#-contributing)
+- [📚 Additional Resources](#-additional-resources)
 - [📄 License](#-license)
 
 ---
@@ -32,6 +34,24 @@ To get the most out of this guide, it is recommended to follow this workflow for
 1.  **Start with the notes:** Each section's `notes.md` file provides a detailed explanation of the concepts.
 2.  **Review the code examples:** The `examples` directory in each section contains Terraform code that demonstrates the concepts from the notes.
 3.  **Complete the exercises:** Each part has a corresponding `exercises` directory to provide hands-on practice to test your knowledge.
+4.  **Reflect and document:** Capture your key takeaways in a personal knowledge base or digital notebook. Summarizing concepts in your own words helps surface gaps before you tackle the practice exams.
+
+> 💡 **Tip:** Pair the exercises with the official documentation. Many directories include a `README.md` with links to the underlying AWS or Terraform resources so you can dig deeper when something is unclear.
+
+---
+
+## 🗓️ Suggested Study Plan
+
+The exam expects hands-on familiarity with Terraform's workflow and supporting services. Use the following outline as a baseline and adjust it to your schedule:
+
+| Week | Focus | Goals |
+| :--- | :---- | :---- |
+| 1 | **Terraform Core Concepts** | Install Terraform, configure your AWS credentials, and complete Part 1 examples. |
+| 2 | **State & Language Mastery** | Deep-dive into Part 2 to practice manipulating state, refactoring with `moved` blocks, and writing expressive variables and functions. |
+| 3 | **Modules & Pipelines** | Build and test reusable modules from Part 3, and explore CI/CD integration or Terraform Cloud/Enterprise workflows. |
+| 4 | **Exam Readiness** | Revisit weaker topics, complete Part 4 practice exams, and perform at least one timed mock exam session. |
+
+Keep iterating through the parts until you can build, refactor, and destroy infrastructure confidently without referencing the notes.
 
 ---
 
@@ -98,6 +118,22 @@ This repository is organized into the following parts. Each part contains its ow
 ## 🤝 Contributing
 
 Contributions are welcome! If you find any errors, have suggestions for improvements, or would like to add more examples or exercises, please open an issue or submit a pull request.
+
+When contributing, please:
+
+-   Keep Terraform code formatted with `terraform fmt`.
+-   Provide a short description of the scenario each example or exercise is illustrating.
+-   Include links to relevant documentation when introducing new AWS services or Terraform language features.
+
+---
+
+## 📚 Additional Resources
+
+Complement your study with the following references:
+
+-   [Terraform Registry Modules](https://registry.terraform.io/browse/modules): Review production-grade modules to understand design patterns and documentation standards.
+-   [HashiCorp Learn Tutorials](https://developer.hashicorp.com/terraform/tutorials): Hands-on labs that mirror the skills assessed in the professional exam.
+-   [AWS Well-Architected Labs](https://www.wellarchitectedlabs.com/): Infrastructure scenarios that reinforce cloud architecture decisions relevant to Terraform implementations.
 
 ---
 
